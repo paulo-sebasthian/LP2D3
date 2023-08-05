@@ -1,4 +1,6 @@
 <?php
+
+require("carro.php");
 class Fruta{
     // atributos da classe
     private $nome;
@@ -11,6 +13,7 @@ class Fruta{
 
     }
 
+    //encapsulamento
     function set_nome($nome){
         if ($nome == "Paulo"){
             $this->nome = "inválido";
@@ -31,11 +34,16 @@ class Fruta{
     }
 }
 
-//Criação de um objeto do tipo maçã
+//Criação de um objeto do tipo fruta
 $maca = new Fruta("maçã","vermelha");
 $banana = new Fruta("banana", "amarela");
 $mamao = new Fruta("mamão", "laranja");
 
+
+//Criação de um objeto do tipo carro
+$carro1 = new Carro("Hyundai","HB20",2015);
+echo "<br> Carro1 - <br><br>Marca = ".$carro1->get_marca()."<br> Modelo = ".
+$carro1->get_modelo()."<br> Ano = ".$carro1->get_ano();
 //Imprimir na tela o nome e a cor dos objetos
 //$maca->cor = "vermelho";
 //$maca->nome = "maçã";
